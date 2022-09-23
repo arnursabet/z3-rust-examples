@@ -10,7 +10,10 @@ pub fn run() {
     let s_sort = DatatypeBuilder::new(&ctx, "S")
         .variant(
             "const",
-            vec![("const", DatatypeAccessor::Sort(Sort::string(&ctx)))],
+            vec![(
+                "const",
+                DatatypeAccessor::Sort(Sort::uninterpreted(&ctx, "S".into())),
+            )],
         )
         .finish();
 

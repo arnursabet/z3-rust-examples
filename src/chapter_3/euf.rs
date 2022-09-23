@@ -1,5 +1,3 @@
-use std::convert::TryInto;
-
 use z3::{ast::*, *};
 
 pub fn run() {
